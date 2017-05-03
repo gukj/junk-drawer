@@ -1,10 +1,11 @@
 <div class="row">
   {{#each model as |book|}}
-    <div class="col-sm-6 col-md-3">
+    <div class="col-sm-3 col-md-3 text-center mb3">
       <div class="thumbnail">
-        <!--<img src="{{book.image}}" alt="Image of {{book.name}}">-->
+        <img src="{{book.imageFront400}}" alt="Image of {{book.name}}">
         <div class="caption">
-          <h5>{{book.name}}</h5>
+          <h5 class="text-uppercase">{{book.name}}</h5>
+          <p class="text-uppercase">{{book.itemNo}}</p>
           {{#link-to 'memo-books.details' book.id class="btn btn-primary"}}Read more{{/link-to}}
         </div>
       </div>
