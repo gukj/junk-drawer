@@ -1,5 +1,9 @@
 <div class="container">
   <h1 class="text-center futura-bold">JUNK DRAWER</h1>
   <h5 class="text-center futura-bold">SHOW OFF YOUR MEMO BOOKS</h5>
+  <ul class="nav navbar-nav">
+    {{#link-to 'memo-books' tagName="li"}}<a href="">Previous memo books</a>{{/link-to}}
+    {{#link-to 'about' tagName="li"}}<a href="">About</a>{{/link-to}}
+  </ul>
   {{outlet}}
 </div>
