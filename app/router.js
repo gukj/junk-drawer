@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('about');
   this.route('memo-books', function() {
     this.route('details', { path: '/:book_id/details' });
+    this.route('new');
   });
 });
 
