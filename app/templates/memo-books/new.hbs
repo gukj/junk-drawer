@@ -1,0 +1,38 @@
+<div class="form-horizontal">
+    <div class="form-group has-feedback {{if model.isValid 'has-success'}}">
+        <label class="col-sm-2 control-label">Name*</label>
+        <div class="col-sm-10">
+          {{input type="text" value=model.name class="form-control" placeholder="The name of the memo book"}}
+          {{#if model.isValid}}<span class="glyphicon glyphicon-ok form-control-feedback"></span>{{/if}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Item No.</label>
+        <div class="col-sm-10">
+          {{input type="text" value=model.itemNo class="form-control" placeholder="Item No. of the edition"}}
+        </div>
+    </div>
+    {{#form-field-item name="Edition Size"}}
+      {{input type="text" value=model.editionSize class="form-control" placeholder="The edition size of this edition"}}
+    {{/form-field-item}}
+    {{#form-field-item name="Description"}}
+      {{input type="text" value=model.description class="form-control" placeholder="A description of the memo book"}}
+    {{/form-field-item}}
+    {{#form-field-item name="Release"}}
+      {{input type="text" value=model.release class="form-control" placeholder="A description of the memo book"}}
+    {{/form-field-item}}
+    {{#form-field-item name="ImageSide"}}
+      {{input type="text" value=model.imageSide class="form-control" placeholder="Link to image of rotated memo book"}}
+    {{/form-field-item}}
+    {{#form-field-item name="ImageFront400"}}
+      {{input type="text" value=model.imageFront400 class="form-control" placeholder="Link to image of memo book (400px)"}}
+    {{/form-field-item}}
+    {{#form-field-item name="ImageFront800"}}
+      {{input type="text" value=model.imageFront800 class="form-control" placeholder="Link to image of memo book (800px)"}}
+    {{/form-field-item}}
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-success" {{action 'saveMemoBook' model}} disabled={{unless model.isValid true}}>Save memo book</button>
+        </div>
+    </div>
+</div>
