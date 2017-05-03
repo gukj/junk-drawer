@@ -1,0 +1,10 @@
+<div class="col-sm-3 col-md-3 text-center mb3">
+  <div class="thumbnail">
+    <img src="{{item.imageFront400}}" alt="Image of {{item.name}}">
+    <div class="caption">
+      <h5 class="text-uppercase">{{item.name}}</h5>
+      <p class="text-uppercase">{{item.itemNo}}</p>
+      {{#link-to 'memo-books.details' item.id class="btn btn-primary"}}Read more{{/link-to}}
+    </div>
+  </div>
+</div>
