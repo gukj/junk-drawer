@@ -8,5 +8,7 @@ export default DS.Model.extend({
   imageSide: DS.attr('string'),
   itemNo: DS.attr('string'),
   name: DS.attr('string'),
-  release: DS.attr('string')
+  release: DS.attr('string'),
+
+  isValid: Ember.computed.notEmpty('name')
 });
