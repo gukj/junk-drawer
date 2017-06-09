@@ -39,6 +39,7 @@
     "ember-welcome-page": "^2.0.2",
     "emberfire": "^2.0.7",
     "emberfire-utils": "^1.3.0",
+    "emberx-file-input": "^1.1.2",
     "loader.js": "^4.2.3"
   },
   "engines": {

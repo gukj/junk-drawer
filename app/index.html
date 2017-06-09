@@ -1,30 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>JunkDrawer</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{content-for "head"}}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>JunkDrawer</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> {{content-for "head"}}
 
-    <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
-    <link rel="stylesheet" href="{{rootURL}}assets/junk-drawer.css">
+  <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+  <link rel="stylesheet" href="{{rootURL}}assets/junk-drawer.css">
 
-    <!-- TypeKit font loading -->
-    <script src="https://use.typekit.net/sse6pso.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
-    <!-- END: TypeKit font loading -->
+  <!-- TypeKit font loading -->
+  <script src="https://use.typekit.net/sse6pso.js"></script>
+  <script>
+    try {
+      Typekit.load({
+        async: true
+      });
+    } catch (e) {}
+  </script>
+  <!-- END: TypeKit font loading -->
 
-    {{content-for "head-footer"}}
-  </head>
-  <body>
-    {{content-for "body"}}
+  {{content-for "head-footer"}}
+</head>
 
-    <script src="{{rootURL}}assets/vendor.js"></script>
-    <script src="{{rootURL}}assets/junk-drawer.js"></script>
+<body>
+  <script src="https://www.gstatic.com/firebasejs/3.0.2/firebase.js"></script>
+  <script>
+    var config = {
+      apiKey: "AIzaSyAG3LvWVNSFUFAkZcHRD_g4zxY5AHenCfw",
+      authDomain: "junk-drawer-f4c1c.firebaseapp.com",
+      databaseURL: "https://junk-drawer-f4c1c.firebaseio.com",
+      storageBucket: "junk-drawer-f4c1c.appspot.com"
+    };
+    firebase.initializeApp(config);
+  </script>
+  {{content-for "body"}}
 
-    {{content-for "body-footer"}}
-  </body>
+  <script src="{{rootURL}}assets/vendor.js"></script>
+  <script src="{{rootURL}}assets/junk-drawer.js"></script>
+
+  {{content-for "body-footer"}}
+</body>
+
 </html>
